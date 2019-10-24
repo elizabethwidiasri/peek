@@ -1,0 +1,27 @@
+{
+  "name": "peek",
+  "version": "1.0.0",
+  "description": "Watch Every Upcoming Movie Trailer For Free",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elizabethwidiasri/peek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elizabethwidiasri/peek/issues"
+  },
+  "homepage": "https://github.com/elizabethwidiasri/peek#readme",
+  "dependencies": {
+    "bulma": "^0.8.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "pg": "^7.12.1",
+    "sequelize": "^5.21.1"
+  }
+}
