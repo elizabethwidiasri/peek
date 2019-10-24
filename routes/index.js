@@ -16,6 +16,7 @@ router.post('/signup', userController.signUp);
 //login
 //gallery
 
+
 router.use(function (req, res, next) {
   if (req.session.user) {
     next()

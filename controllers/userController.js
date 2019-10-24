@@ -19,6 +19,7 @@ class UserController {
         res.render('par', {err : err.message})
       })
   }
+  
 
   static signIn(req, res) {
     // console.log('wooooi')
