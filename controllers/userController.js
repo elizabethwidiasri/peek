@@ -14,7 +14,7 @@ class UserController {
         res.redirect('/');
       })
       .catch(err => {
-        res.redirect(`/?err=${err.message}`)
+        res.redirect(`/`)
       })
   }
 
@@ -31,7 +31,7 @@ class UserController {
           req.session.user = user
           console.log(`masukkkkk`);
           
-          res.redirect('/');
+          res.redirect(`/${user.id}`);
         } else {
           res.redirect()
         }

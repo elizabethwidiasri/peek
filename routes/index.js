@@ -5,9 +5,16 @@ const reviewController = require('../controllers/reviewController')
 const trailerController = require('../controllers/trailerController')
 const alertFail = require('../helpers/alertFail');
 
-//home
+
 router.get('/', (req, res) => {
-    router.use(function (req, res, next) {
+    
+    res.render('par', { err: null});
+});
+
+router.post('/signin', userController.signIn);
+router.post('/signup', userController.signUp);
+
+router.use(function (req, res, next) {
   if (req.session.user) {
     next()
   } else {
@@ -16,18 +23,21 @@ router.get('/', (req, res) => {
   }
   res.send('middleware')
 })
-    res.render('par', {
-        err: req.query.err
-    });
-});
-//register
-router.post('/signin', userController.signIn);
-router.post('/signup', userController.signUp);
-//login
-//gallery
-router.get('/gallery', (req, res) => {
+
+
+router.get('/:id/gallery', (req, res) => {
     res.render('gallery');
 })
+
+
+
+
+
+
+
+
+
+
 //menampilkan semua trailer 
 // router.get('/trailer', trailerController.findAll)
 
