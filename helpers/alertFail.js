@@ -1,5 +1,5 @@
 function gagal(err) {
-    alert(err);
+    return alert(err);
 }
 
 module.exports = gagal;

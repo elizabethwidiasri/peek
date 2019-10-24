@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <title>PEEK.COM</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -16,9 +17,7 @@
 </head>
 
 <body>
-    <% if (err) { %>
-    <%= alertFail(err) %>
-    <% } %>
+ 
     <nav role='navigation' id="mainnav">
         <br><br><br>
         <ul class="gap">
@@ -37,6 +36,12 @@
 
             <!-- Modal content-->
             <div class="modal-content">
+              
+                <div class="alert alert-danger">
+                         <%= err %>
+                      </div>
+
+
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">SIGNUP FORM</h4>
@@ -47,6 +52,7 @@
                             <label for="exampleInputEmail1">Name</label>
                             <input type="text" class="form-control" id="Fullname" placeholder="Fullname" name="name">
                         </div>
+                  
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email</label>
                             <input type="text" class="form-control" id="username" placeholder="Email" name="email">
@@ -64,9 +70,10 @@
                         <div class="modal-footer">
                             <!-- <input type="submit" value="bhbhbhbhb"> -->
                             <!-- <input type="submit" class="btn btn-success" data-target="modal" value="asu"> -->
-                            <button type="submit" class="btn btn-success" data-target="modal">Daftar</button>
+                            <button type="submit" class="btn btn-success" data-target="modal" >Daftar</button>
                             <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
+                        
                     </form>
                 </div>
             </div>

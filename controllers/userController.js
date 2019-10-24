@@ -28,6 +28,9 @@ class UserController {
       })
       .then(user => {
         if (user && user.password === hashPassword(req.body.password, user.salt)) {
+          req.session.user = user
+          console.log(`masukkkkk`);
+          
           res.redirect('/');
         } else {
           res.redirect()
