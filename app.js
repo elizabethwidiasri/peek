@@ -6,6 +6,7 @@ const session = require('express-session')
 // const user = require('./routes/user');
 const port = 3000
 
+
 app.set("view engine", "ejs")
 
 app.use(express.json());
