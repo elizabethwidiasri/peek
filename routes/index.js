@@ -7,24 +7,24 @@ const alertFail = require('../helpers/alertFail');
 
 //home
 router.get('/', (req, res) => {
-    router.use(function (req, res, next) {
-  if (req.session.user) {
-    next()
-  } else {
-    res.send('you have to login first')
-
-  }
-  res.send('middleware')
-})
-    res.render('par', {
-        err: req.query.err
-    });
+   
+    res.render('par', {err : null} );
 });
 //register
 router.post('/signin', userController.signIn);
 router.post('/signup', userController.signUp);
 //login
 //gallery
+
+router.use(function (req, res, next) {
+  if (req.session.user) {
+    next()
+  } else {
+    // res.send('you have to login first')
+    // swal.fire('haloooooo')
+    res.render('par', {err : `You have to login first`})
+  }
+})
 router.get('/gallery', (req, res) => {
     res.render('gallery');
 })

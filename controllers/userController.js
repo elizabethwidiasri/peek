@@ -14,7 +14,9 @@ class UserController {
         res.redirect('/');
       })
       .catch(err => {
-        res.redirect(`/?err=${err.message}`)
+        // res.redirect(`/?err=${err.message}`)
+        
+        res.render('par', {err : err.message})
       })
   }
 
@@ -30,11 +32,14 @@ class UserController {
         if (user && user.password === hashPassword(req.body.password, user.salt)) {
           req.session.user = user
           console.log(`masukkkkk`);
-          
           res.redirect('/');
         } else {
-          res.redirect()
+          // res.send('You have to Sign Up')
+          res.render('par', {err : `You have to Sign Up`})
         }
+      })
+      .catch(err => {
+        res.send(err.message)
       })
 
     // static findAll(req, res) {

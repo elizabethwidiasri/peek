@@ -3,28 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    
+    
     <title>PEEK.COM</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
     <!--par css-->
     <link rel="stylesheet" href="./css/par.css">
     <!--boots-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
 </head>
 
 <body>
- 
+    
+    
+
+    <p id="err" style="display:none"><%= err %></p>
+
+  
+      
     <nav role='navigation' id="mainnav">
         <br><br><br>
         <ul class="gap">
             <li><a href="/">HOME</a></li>
-            <li data-toggle="modal" data-target="#myregister"><a href="#">SIGNUP</a></li>
-            <li data-toggle="modal" data-target="#mylogin"><a href="#">SIGNIN</a></li>
-            <li><a href="/gallery">GALLERY</a></li>
+            <li data-toggle="modal" data-target="#myregister"><a href="#">SIGN UP</a></li>
+            <li data-toggle="modal" data-target="#mylogin"><a href="#">LOG IN</a></li>
+            <li><a  href="/gallery">GALLERY</a></li>
             <li><a href="#?">CONTACT</a></li>
             <li><a href="#?">TEAMS</a></li>
         </ul>
@@ -37,9 +47,6 @@
             <!-- Modal content-->
             <div class="modal-content">
               
-                <div class="alert alert-danger">
-                         <%= err %>
-                      </div>
 
 
                 <div class="modal-header">
@@ -135,9 +142,28 @@
     <canvas id="bubble"></canvas>
 
 
+
+
+    <script>
+
+        
+        $(document).ready(function () {
+            
+            var x = document.getElementById("err").innerText;
+
+
+                swal(x);
+              
+            })
+            
+            
+            
+            </script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
     <script src="./js/par.js"></script>
+  
+
 </body>
 
 </html>
