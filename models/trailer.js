@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
     title: DataTypes.STRING,
     link: DataTypes.STRING,
     category: DataTypes.STRING,
-    comment : DataTypes.STRING
+    imageSource: DataTypes.STRING
   }, { sequelize })
  
   Trailer.associate = function(models) {

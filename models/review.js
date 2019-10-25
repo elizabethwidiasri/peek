@@ -14,10 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     UserId: DataTypes.INTEGER,
     TrailerId: DataTypes.INTEGER,
-    comment : {
-      type : DataTypes.STRING,
+    comment : DataTypes.STRING
       
-    }
   }, {sequelize })
  
   Review.associate = function(models) {

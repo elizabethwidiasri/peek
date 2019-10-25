@@ -32,8 +32,11 @@ class UserController {
       .then(user => {
         if (user && user.password === hashPassword(req.body.password, user.salt)) {
           req.session.user = user
-          console.log(`masukkkkk`);
-          res.redirect('/');
+          console.log(`constrollermasukkkkk`);
+          res.redirect(`/${user.id}`);
+          // res.redirect('/')
+          console.log(user.id, "ini user id");
+          
         } else {
           // res.send('You have to Sign Up')
           res.render('par', {err : `You have to Sign Up`})
@@ -42,6 +45,17 @@ class UserController {
       .catch(err => {
         res.send(err.message)
       })
+
+      
+
+
+
+  }
+
+  
+}
+module.exports = UserController
+
 
     // static findAll(req, res) {
     //   User.findAll()
@@ -153,8 +167,3 @@ class UserController {
     //       })
     //     })
     // }
-
-
-  }
-}
-module.exports = UserController

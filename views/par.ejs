@@ -34,8 +34,8 @@
             <li data-toggle="modal" data-target="#myregister"><a href="#">SIGN UP</a></li>
             <li data-toggle="modal" data-target="#mylogin"><a href="#">LOG IN</a></li>
             <li><a  href="/gallery">GALLERY</a></li>
-            <li><a href="#?">CONTACT</a></li>
-            <li><a href="#?">TEAMS</a></li>
+            <li><a href="/logout">LOG OUT</a></li>
+            
         </ul>
     </nav>
 
@@ -145,8 +145,13 @@
 
     <script>
         $(document).ready(function () {
-            var x = document.getElementById("err").innerText;
-                swal(x);
+            var error = document.getElementById("err").innerText;
+
+            if (error) {
+                swal(error);
+            } 
+
+
             })
             </script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

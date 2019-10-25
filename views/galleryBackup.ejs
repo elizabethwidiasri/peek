@@ -117,29 +117,93 @@
         </div>
       </div>
       <div class="row">
-          <% trailer.forEach(film => { %>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <form method ="POST" "POST", action="/gallery/<%=userId%>/<%= film.id%>" >
-                  <input type="text" name="movie" value="<%= film.id%>" style="display:none">
+        <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-          </form>
-            <img class="img-fluid" src="img/gallery/<%= film.imageSource%>" alt="">
+            <img class="img-fluid" src="img/gallery/thumbnailbatman.jpg" alt="">
           </a>
-            <div class="portfolio-caption">
-              <h4><a style="color: black;" href="/gallery/<%=userId%>/<%= film.id%>"><%= film.title %></a></h4>
-              <p class="text-muted"><%= film.category %></p>
-            </div>
-
+          <div class="portfolio-caption">
+            <h4>Batman The Dark Knight</h4>
+            <p class="text-muted">Action</p>
           </div>
-          <% }) %>
- </section>
-
-        
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/gallery/thumbnailfriend.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Friends The Movie 2020</h4>
+            <p class="text-muted">Commedy</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/gallery/badboy3.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>BadBoys 3</h4>
+            <p class="text-muted">Action Commedy</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/gallery/thumbnail4.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>A Quiet Place</h4>
+            <p class="text-muted">Horror</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/gallery/thumbnail5.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Gretel & Hansel</h4>
+            <p class="text-muted">Horror</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/gallery/thumbnail6.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Fast And Furious 9</h4>
+            <p class="text-muted">Action</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Team -->
   <section class="bg-light page-section" id="team">
@@ -154,8 +218,8 @@
         <div class="col-sm-4">
           <div class="team-member">
             <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-            <h4>Edwin Satya</h4>
-            <p class="text-muted">Fullstuck</p>
+            <h4>Kay Garland</h4>
+            <p class="text-muted">Lead Designer</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -178,8 +242,8 @@
         <div class="col-sm-4">
           <div class="team-member">
             <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-            <h4>Elizabet</h4>
-            <p class="text-muted">Full stuck</p>
+            <h4>Larry Parker</h4>
+            <p class="text-muted">Lead Marketer</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">

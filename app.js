@@ -2,9 +2,13 @@ const express = require('express')
 const app = express()
 const routes = require('./routes/');
 const session = require('express-session')
+const path = require('path')
 // const gallery = require('./routes/gallery');
 // const user = require('./routes/user');
 const port = 3000
+
+
+
 
 app.set("view engine", "ejs")
 
@@ -14,6 +18,8 @@ app.use(express.urlencoded({
 }));
 
 app.use(express.static('public'));
+
+app.use('/gallery/',express.static('public'))
 
 
 app.use(session({

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Peek</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+ 
+  <%= review[0].Trailer.title %>
+  
+
+  <form method="POST" action="/gallery/<%= userId %>/<%= review[0].TrailerId %>/update">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nama</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama" name="name">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Comment</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="comment" name="comment">
+      </div>
+      <input type="submit" value="Submit" class="btn btn-primary">
+
+     
+    </form>
+
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Comment</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% review.forEach(data => { %>
+              <tr>
+                  <th scope="row"><%= data.User.id %></th>
+                  <td><%= data.User.name %></td>
+                  <td><%= data.comment %></td>
+                  <td><a href="/gallery/<%= data.id %>/edit">Edit</a> | <a href="/gallery/<%= data.id %>/delete">Delete</a></td>
+                </tr>
+           <% }) %>
+            
+
+
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>
